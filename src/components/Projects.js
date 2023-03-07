@@ -66,8 +66,8 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">hi1</Tab.Pane>
-                            <Tab.Pane eventKey="third">hi2</Tab.Pane>
+                            <Tab.Pane eventKey="second">Coming Soon!</Tab.Pane>
+                            <Tab.Pane eventKey="third">Coming Soon!</Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>
