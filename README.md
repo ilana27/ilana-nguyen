@@ -1,3 +1,9 @@
+Welcome to my Personal Portfolio website repo!
+
+Here is a preview of what it looks like:
+
+<img width="1384" alt="Screen Shot 2023-03-07 at 4 59 40 PM" src="https://user-images.githubusercontent.com/32114989/223563130-cb195533-7f0e-4d92-8d68-d53b8f1fdbca.png">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
