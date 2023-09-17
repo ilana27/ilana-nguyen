@@ -7,10 +7,10 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Ilana", "a Web Developer", "a CS Student"];
+    const toRotate = [ "Ilana", "a CS Student", "a ML researcher"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
-    const period = 2000;
+    const period = 1000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -50,7 +50,7 @@ export const Banner = () => {
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{`Hi I'm `}<span className = "wrap">{text}</span></h1>
                         <p>Nice to meet you! I'm studying CS at Brown University 
-                            and am interested in web development, deep learning and language models, and data science.</p>
+                            and am interested in building machine learning applications in healthcare and researching topics in multimodal learning and learning data-scarce environments.</p>
                         <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
