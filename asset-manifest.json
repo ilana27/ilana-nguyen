@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/ilana-nguyen/static/css/main.cc18be99.css",
-    "main.js": "/ilana-nguyen/static/js/main.017bea98.js",
+    "main.js": "/ilana-nguyen/static/js/main.228df972.js",
     "static/js/787.fb771931.chunk.js": "/ilana-nguyen/static/js/787.fb771931.chunk.js",
+    "static/media/vitposter.png": "/ilana-nguyen/static/media/vitposter.11af5b3c84c8c8745776.png",
     "static/media/innoverge2.png": "/ilana-nguyen/static/media/innoverge2.dbc2d3d6a27304620a63.png",
     "static/media/innoverge1.png": "/ilana-nguyen/static/media/innoverge1.eb07ec0e3ffa94096a23.png",
+    "static/media/dlposter.png": "/ilana-nguyen/static/media/dlposter.f1e31b057371b4bb1ad2.png",
     "static/media/color-sharp.png": "/ilana-nguyen/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/ilana-nguyen/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/wics2.png": "/ilana-nguyen/static/media/wics2.3c86a7022cf6b963178d.png",
@@ -29,11 +31,11 @@
     "static/media/arrow1.svg": "/ilana-nguyen/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "/ilana-nguyen/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.cc18be99.css.map": "/ilana-nguyen/static/css/main.cc18be99.css.map",
-    "main.017bea98.js.map": "/ilana-nguyen/static/js/main.017bea98.js.map",
+    "main.228df972.js.map": "/ilana-nguyen/static/js/main.228df972.js.map",
     "787.fb771931.chunk.js.map": "/ilana-nguyen/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc18be99.css",
-    "static/js/main.017bea98.js"
+    "static/js/main.228df972.js"
   ]
 }
