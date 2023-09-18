@@ -7,7 +7,7 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Ilana", "a CS Student", "a ML researcher"];
+    const toRotate = [ "Ilana"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 1000;
@@ -49,10 +49,18 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
                         <h1>{`Hi I'm `}<span className = "wrap">{text}</span></h1>
-                        <p>Nice to meet you! I'm studying CS at Brown University 
-                            and am interested in building machine learning applications in healthcare and researching topics in multimodal learning and learning data-scarce environments.</p>
-                        <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
-                    </Col>
+                        <p>
+                            Nice to meet you! 
+                            <ul>
+                                <li>I'm studying CS at Brown University.</li>
+                                <li>I'm passionate about building machine learning applications for healthcare.</li>
+                                <li>I'm interested in researching multimodal learning and learning in data-scarce environments.</li>
+                            </ul> </p>
+                        <button onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href='https://github.com/ilana27';
+                        }}>See my work <ArrowRightCircle size={25} /></button>
+                        </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img" />
                     </Col>
