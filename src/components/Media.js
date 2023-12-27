@@ -31,7 +31,7 @@ export const Media = () => {
         }
       };
     
-      const LinkWithHoverColor = ({ url, text, hoverColor }) => {
+    const LinkWithHoverColor = ({ url, text, hoverColor }) => {
         const [isHovered, setIsHovered] = useState(false);
       
         const handleMouseEnter = () => {
@@ -44,7 +44,7 @@ export const Media = () => {
       
         const linkStyle = {
           color: isHovered ? hoverColor : 'white',
-          textDecoration: 'underline',
+          textDecoration: 'none',
           transition: 'color 0.3s ease',
         };
       
@@ -73,12 +73,35 @@ export const Media = () => {
                                 Media 
                             </h2>
                             <img src={tedTalk} alt="TEDx Talk" />
-                            <p>Hover over this <LinkWithHoverColor url="https://example.com" text="link" hoverColor="pink" /> for color change.</p>
+                            <p>I gave a talk at TEDxOakland on <LinkWithHoverColor url="https://www.ted.com/talks/teens_technology_and_the_antidote" text="Teens, Technology, and the Antidote" hoverColor="#AA367C" />!</p>
                             {/* <p>I talk about my research, equitable STEMxHumanities education, social tech, and youth wellbeing:</p> */}
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                                <div>
-                                Building Diversity and IoT Expertise into Next-Gen Tech Leaders
+                                <div className="item">
+                                <p>UC Irvine <br></br> <LinkWithHoverColor url="https://ics.uci.edu/2023/12/08/building-diversity-and-iot-expertise-into-next-gen-tech-leaders/" text="Building Diversity and IoT Expertise into Next-Gen Tech Leaders" hoverColor="#AA367C" /></p>
                                 </div>
+                                <div className="item">
+                                <p>Forbes <br></br><LinkWithHoverColor url="https://www.forbes.com/sites/maryjuetten/2021/01/14/tackling-our-stem-education-challenge-innoverge/" text="Tackling Our STEM Education Challenge: Innoverge" hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>Headstream Innovation <br></br><LinkWithHoverColor url="https://open.spotify.com/episode/1HY9Z2sopEr7CivZA53Uyl" text="Navigating Your River of Wellness with Digital Technology with Ilana Nguyen" hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>Psychology Today <br></br><LinkWithHoverColor url="https://www.psychologytoday.com/us/blog/z-alpha/202007/3-ways-tech-can-support-teens-right-now" text="3 Ways Tech Can Support Teens Right Now" hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>And She Did. <br></br><LinkWithHoverColor url="https://open.spotify.com/episode/47yFmAwl6v31S0XXuBj88N?si=S2vgLjekTy-E-8m1SX22aA&dl_branch=1&nd=1" text="Ilana Nguyen Wanted to Advance STEMx Education in Underserved Communities, And She Did." hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>Colonize This. <br></br><LinkWithHoverColor url="https://open.spotify.com/episode/2ZB1c7AaZRAIbDqupYVPVX?si=U7xP_kZOS2qKCtLKz0VY9Q&dl_branch=1&nd=1" text="Women in STEM+ ft. Ilana Nguyen" hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>The Citizen <br></br><LinkWithHoverColor url="https://peraltacitizen.com/2019/11/05/talking-tech-social-issues-and-social-equity-tedx-oakland-comes-to-laney/" text="Talking Tech, Social Issues, and Social Equity: TEDx Oakland Comes to Laney" hoverColor="#AA367C" /></p>
+                                </div>
+                                <div className="item">
+                                <p>Pixel Journal <br></br><LinkWithHoverColor url="https://www.pixeljournal.org/stories-blog/2019/11/22/inside-ilana-nguyens-tedx-talk" text="Inside Ilana Nguyen's TEDx Talk" hoverColor="#AA367C" /></p>
+                                </div>
+                                
+                                
                                 {/* <div className="item">
                                     <img src={meter2} alt="Image" />
                                     <h5>Data Science</h5>
