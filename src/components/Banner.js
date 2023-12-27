@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/circle-headshot.svg";
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Ilana"];
+    const toRotate = [ "ilana"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 1000;
+    const [activeLink, setActiveLink] = useState('home');
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -42,13 +43,16 @@ export const Banner = () => {
         }
     }
 
+    const onUpdateActiveLink = (value) => {
+        setActiveLink(value);
+    }
+
     return (
         <section className="banner" id="home">
             <Container>
                 <Row className = "align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hi I'm `}<span className = "wrap">{text}</span></h1>
+                        <h1>{`hey, i'm `}<span className = "wrap">{text}</span></h1>
                         <p>
                             Nice to meet you! 
                             <ul>
@@ -56,9 +60,7 @@ export const Banner = () => {
                                 <li>I'm passionate about building machine learning applications for healthcare.</li>
                                 <li>I'm interested in researching multimodal learning and learning in data-scarce environments.</li>
                             </ul> </p>
-                        <button onClick={(e) => {
-                        e.preventDefault();
-                        window.location.href='https://github.com/ilana27';
+                        <button onClick={(e) => {onUpdateActiveLink('media')
                         }}>See my work <ArrowRightCircle size={25} /></button>
                         </Col>
                     <Col xs={12} md={6} xl={5}>
