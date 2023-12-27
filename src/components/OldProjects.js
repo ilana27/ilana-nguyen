@@ -7,9 +7,8 @@ import innovergeImg1 from "../assets/img/innoverge1.png";
 import innovergeImg2 from "../assets/img/innoverge2.png";
 import dlposter from "../assets/img/dlposter.png";
 import vitposter from "../assets/img/vitposter.png";
-import uci from "../assets/img/uci.jpeg";
 
-export const Projects = () => {
+export const OldProjects = () => {
 
     const dlprojects = [
         {
@@ -68,13 +67,32 @@ export const Projects = () => {
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
+                            <Tab.Pane eventKey="first">
+                                    <Row>
+                                        {
+                                            dlprojects.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
+                                    </Row>
+                            </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                     <Row>
-                                    <ProjectCard 
-                                        title="Women in CS Website"
-                                        description="Frontend Development"
-                                        imgUrl={uci}
-                                    />
+                                        {
+                                            webprojects.map((project, index) => {
+                                                return (
+                                                    <ProjectCard
+                                                        key={index}
+                                                        {...project}
+                                                    />
+                                                )
+                                            })
+                                        }
                                     </Row></Tab.Pane>
                         
                             <Tab.Pane eventKey="third">Coming Soon!</Tab.Pane>
