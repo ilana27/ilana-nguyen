@@ -1,13 +1,16 @@
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectDescription } from "./ProjectDescription";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import wicsImg1 from "../assets/img/wics1.png";
 import wicsImg2 from "../assets/img/wics2.png";
 import innovergeImg1 from "../assets/img/innoverge1.png";
 import innovergeImg2 from "../assets/img/innoverge2.png";
+import innoverge from "../assets/img/innoverge.jpeg";
 import dlposter from "../assets/img/dlposter.png";
 import vitposter from "../assets/img/vitposter.png";
 import uci from "../assets/img/uci.jpeg";
+import journal from "../assets/img/journal.png";
 
 export const Projects = () => {
 
@@ -53,11 +56,7 @@ export const Projects = () => {
       ];
       
       const ProjectDetailsComponent = ({ details }) => (
-        
         <ul>
-          <h4>
-          Innoverge International Nonprofit
-        </h4>
           {details.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
@@ -85,6 +84,23 @@ export const Projects = () => {
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
+                        <Tab.Pane eventKey="first">
+                                    <Row>
+                                    <ProjectCard 
+                                        title="Journal AI Buddy"
+                                        description="Main page"
+                                        imgUrl={journal}
+                                    />
+                                    <ProjectDescription
+                                      title="MIND: Journal AI Buddy
+                                      "
+                                      description="Collaborating with a team of 3 to build custom backend and frontend for a journaling website that generates daily prompts, saves past journal entries for a user, and uses an ML vector similarity recommendation algorithm to personalize and rank mental health suggestions generated from the journal content through the OpenAI API.
+                                      Conducted user research and incorporated feedback into product from 10+ potential users and therapists
+                                      "
+                                      /> 
+                                    </Row>
+                                    
+                                    </Tab.Pane>
                             <Tab.Pane eventKey="second">
                                     <Row>
                                     <ProjectCard 
@@ -92,22 +108,31 @@ export const Projects = () => {
                                         description="UCI Final Symposium"
                                         imgUrl={uci}
                                     />
-                                    </Row></Tab.Pane>
+                                    <ProjectDescription
+                                      title="Predicting Fall Risk using Bio-Clinical BERT on Nursing Notes
+                                      "
+                                      description="Developed a Python pipeline for a deep learning classification model for patient fall risk assessment using a foundation large language model, Bio-Clinical BERT, on nurse’s notes. 
+                                      Delivered poster presentation at IEEE MIT Undergraduate Research Technology Conference in October 2023.
+                                      Worked in NSF-funded REU research program with 7% acceptance rate led by Prof Nalini Venkatasubramanian
+                                      "
+                                      /> 
+                                    </Row>
+                                    
+                                    </Tab.Pane>
                         
                             <Tab.Pane eventKey="third">
-                            <Row noGutters>
-                              <Col>
-                              <ProjectCard 
-                                        title="UCI REU Research"
-                                        description="UCI Final Symposium"
-                                        imgUrl={uci}
+                            <Row>
+                                    <ProjectCard 
+                                        title="YMCA STEM workshop"
+                                        description="Leading a workshop in my local community"
+                                        imgUrl={innoverge}
                                     />
-                              </Col>
-                              <Col>
-                              <ProjectDetailsComponent details={projectDetails} />
-                              </Col>
-
-                            </Row>
+                                    <ProjectDescription
+                                      title="Innoverge International Nonprofit"
+                                      description="Joined as a founding member of Innoverge in 2020 (Originally EduSTEM in 2018).
+                                      Led our growth to an international impact of 10.2k students through 400+ workshops run across 14 countries!"
+                                      /> 
+                                    </Row>
                             </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
