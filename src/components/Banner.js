@@ -54,11 +54,10 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <h1>{`hey, i'm `}<span className = "wrap">{text}</span></h1>
                         <p>
-                            Nice to meet you! 
                             <ul>
-                                <li>I'm studying CS at Brown University.</li>
-                                <li>I'm passionate about building machine learning applications for healthcare.</li>
-                                <li>I'm interested in researching multimodal learning and learning in data-scarce environments.</li>
+                                <li>CS at Brown University.</li>
+                                <li>Prev ML/IoT REU Intern at UC Irvine.</li>
+                                <li>Passionate about ML and NLP applications for healthcare.</li>
                             </ul> </p>
                         <button onClick={(e) => {onUpdateActiveLink('media')
                         }}>See my work <ArrowRightCircle size={25} /></button>

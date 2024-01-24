@@ -47,6 +47,23 @@ export const Projects = () => {
         }
       ];
 
+    const projectDetails = [
+        "Joined as a founding member of Innoverge in 2020 (Originally EduSTEM in 2018)",
+        "Led our growth to an international impact of 10.2k students through 400+ workshops run across 14 countries!"
+      ];
+      
+      const ProjectDetailsComponent = ({ details }) => (
+        
+        <ul>
+          <h4>
+          Innoverge International Nonprofit
+        </h4>
+          {details.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
+        </ul>
+      );
+
     return (
         <section className="project" id="project">
             <Container>
@@ -71,13 +88,27 @@ export const Projects = () => {
                             <Tab.Pane eventKey="second">
                                     <Row>
                                     <ProjectCard 
-                                        title="Women in CS Website"
-                                        description="Frontend Development"
+                                        title="UCI REU Research"
+                                        description="UCI Final Symposium"
                                         imgUrl={uci}
                                     />
                                     </Row></Tab.Pane>
                         
-                            <Tab.Pane eventKey="third">Coming Soon!</Tab.Pane>
+                            <Tab.Pane eventKey="third">
+                            <Row noGutters>
+                              <Col>
+                              <ProjectCard 
+                                        title="UCI REU Research"
+                                        description="UCI Final Symposium"
+                                        imgUrl={uci}
+                                    />
+                              </Col>
+                              <Col>
+                              <ProjectDetailsComponent details={projectDetails} />
+                              </Col>
+
+                            </Row>
+                            </Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>
